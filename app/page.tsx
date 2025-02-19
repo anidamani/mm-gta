@@ -13,7 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import type { Mosque, PrayerType } from "@/types/mosque"
+import type { PrayerType } from "@/types/mosque"
 
 import { mosques } from "@/data/mosques"
 
