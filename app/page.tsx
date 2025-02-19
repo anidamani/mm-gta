@@ -45,11 +45,12 @@ export default function HomePage() {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address}, ${city}, ON, Canada`)}`
   }
 
-  const getCurrentTaraweehTime = (times: { start_date: string; end_date: string; prayer_time: string }[]) => {
-    const now = new Date()
-    const currentPeriod = times.find((time) => new Date(time.start_date) <= now && new Date(time.end_date) >= now)
-    return currentPeriod?.prayer_time || times[0].prayer_time
-  }
+  // Remove this unused function
+  // const getCurrentTaraweehTime = (times: { start_date: string; end_date: string; prayer_time: string }[]) => {
+  //   const now = new Date()
+  //   const currentPeriod = times.find((time) => new Date(time.start_date) <= now && new Date(time.end_date) >= now)
+  //   return currentPeriod?.prayer_time || times[0].prayer_time
+  // }
 
   const getActivePeriodIndex = (
     times: { start_date: string; end_date: string; prayer_time: string }[]
