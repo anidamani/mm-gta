@@ -41,8 +41,9 @@ export default function HomePage() {
     document.documentElement.classList.toggle("dark")
   }
 
-  const getGoogleMapsUrl = (address: string, city: string) => {
-    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address}, ${city}, ON, Canada`)}`
+  const getGoogleMapsUrl = (mosque_name: string, address: string, city: string) => {
+    if (!address) return null;
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${mosque_name}, ${address}, ${city}, ON, Canada`)}`
   }
 
   // Remove this unused function
@@ -92,12 +93,20 @@ export default function HomePage() {
           defaultValue="taraweeh" 
           value={prayerType} 
           onValueChange={(value) => setPrayerType(value as PrayerType)}
+          className="flex flex-col h-[calc(100vh-4rem)]" // Add this line
         >
-          <TabsList className="grid w-full grid-cols-3 mb-6">
-            <TabsTrigger value="taraweeh">Taraweeh Prayer</TabsTrigger>
-            <TabsTrigger value="jumuah">Jumuah Prayer</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 mb-6 sticky top-0 z-10 bg-background/95 backdrop-blur">
+            <TabsTrigger value="taraweeh">
+              <span className="md:inline hidden">Taraweeh Prayer</span>
+              <span className="md:hidden">Taraweeh</span>
+            </TabsTrigger>
+            <TabsTrigger value="jumuah">
+              <span className="md:inline hidden">Jumuah Prayer</span>
+              <span className="md:hidden">Jumuah</span>
+            </TabsTrigger>
             <TabsTrigger value="eid" disabled className="relative">
-              Eid Prayer
+              <span className="md:inline hidden">Eid Prayer</span>
+              <span className="md:hidden">Eid</span>
               <Badge
                 variant="secondary"
                 className="absolute -top-1 -right-1 text-xs px-1.5 py-0.5 bg-muted-foreground/10"
@@ -107,7 +116,7 @@ export default function HomePage() {
             </TabsTrigger>
           </TabsList>
 
-          <Card className="bg-card">
+          <Card className="bg-card sticky top-[4.5rem] z-10">
             <CardHeader>
               <CardTitle>{prayerType === "taraweeh" ? "Find Taraweeh" : "Find Jumuah"}</CardTitle>
               <CardDescription>
@@ -145,21 +154,21 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          <div className="mt-6 space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">
-                {selectedCity === "all" ? "All Locations" : `Mosques in ${selectedCity}`}
-                <Badge variant="secondary" className="ml-2">
-                  {filteredMosques.length}
-                </Badge>
-              </h2>
-              <Link href="/submit" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Add New Location
-              </Link>
-            </div>
+          <div className="mt-6 flex-1 overflow-auto">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">  {/* Removed 'sticky top-0' class */}
+                <h2 className="text-lg font-semibold">
+                  {selectedCity === "all" ? "All Locations" : `Mosques in ${selectedCity}`}
+                  <Badge variant="secondary" className="ml-2">
+                    {filteredMosques.length}
+                  </Badge>
+                </h2>
+                <Link href="/submit" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Add New Location
+                </Link>
+              </div>
 
-            <ScrollArea className="h-[600px] rounded-lg">
-              <div className="space-y-4 pr-4">
+              <div className="space-y-4">
                 {filteredMosques.map((mosque) => (
                   <Card key={mosque.id} className="overflow-hidden transition-all hover:shadow-lg">
                     <CardContent className="p-4">
@@ -192,16 +201,18 @@ export default function HomePage() {
                             <Building2 className="h-4 w-4 text-primary" />
                             {mosque.city}
                           </div>
-                          <a
-                            href={getGoogleMapsUrl(mosque.address, mosque.city)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1 hover:text-primary transition-colors"
-                          >
-                            <MapPin className="h-4 w-4" />
-                            {mosque.address}
-                            <ExternalLink className="h-3 w-3" />
-                          </a>
+                          {mosque.address && (
+                            <a
+                              href={getGoogleMapsUrl(mosque.mosque_name, mosque.address, mosque.city)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 hover:text-primary transition-colors"
+                            >
+                              <MapPin className="h-4 w-4" />
+                              {mosque.address}, {mosque.city}
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          )}
                         </div>
 
                         {prayerType === "taraweeh" && mosque.taraweeh?.times && (
@@ -232,8 +243,8 @@ export default function HomePage() {
                                       </span>
                                     </div>
                                     <span className="text-sm text-muted-foreground">
-                                      {format(new Date(time.start_date), "MMM d")} -{" "}
-                                      {format(new Date(time.end_date), "MMM d")}
+                                      {format(new Date(`${time.start_date}T00:00:00`), "MMM dd")} -{" "}
+                                      {format(new Date(`${time.end_date}T00:00:00`), "MMM dd")}
                                     </span>
                                   </div>
                                 )
@@ -269,7 +280,7 @@ export default function HomePage() {
                   </Card>
                 ))}
               </div>
-            </ScrollArea>
+            </div>
           </div>
         </Tabs>
       </main>

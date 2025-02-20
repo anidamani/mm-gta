@@ -18,7 +18,7 @@ export interface EidTime {
 }
 
 export interface Mosque {
-  id: string
+  id: number  // Change from 'int' to 'number'
   mosque_name: string
   address: string
   city: string

@@ -29,7 +29,7 @@ interface Submission extends Mosque {
 
 const mosques: Mosque[] = [
   {
-    id: "1",
+    id: 1,
     mosque_name: "Islamic Foundation of Toronto",
     address: "441 Nugget Ave",
     city: "Scarborough",
@@ -62,7 +62,7 @@ const mosques: Mosque[] = [
 
 const submissions: Submission[] = [
   {
-    id: "sub1",
+    id: 1,
     mosque_name: "New Islamic Center",
     address: "789 Example Street",
     city: "Toronto",
@@ -127,7 +127,7 @@ export default function AdminPage() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
       // Update the submission status
-      submissions.find(s => s.id === submissionId)!.status = newStatus
+      submissions.find(s => s.id.toString() === submissionId)!.status = newStatus
       // Add success notification here
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to update status')
@@ -142,7 +142,7 @@ export default function AdminPage() {
 
   const handleSaveEdit = async () => {
     if (!editingMosque) return
-    setIsProcessing(editingMosque.id)
+    setIsProcessing(editingMosque.id.toString())
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000))
     setIsProcessing(null)
@@ -291,18 +291,18 @@ export default function AdminPage() {
                               <Button
                                 variant="default"
                                 size="sm"
-                                onClick={() => handleStatusChange(submission.id, "approved")}
-                                disabled={isProcessing === submission.id}
+                                onClick={() => handleStatusChange(submission.id.toString(), "approved")}
+                                disabled={isProcessing === submission.id.toString()}
                               >
-                                {isProcessing === submission.id ? "Processing..." : "Approve"}
+                                {isProcessing === submission.id.toString() ? "Processing..." : "Approve"}
                               </Button>
                               <Button
                                 variant="destructive"
                                 size="sm"
-                                onClick={() => handleStatusChange(submission.id, "rejected")}
-                                disabled={isProcessing === submission.id}
+                                onClick={() => handleStatusChange(submission.id.toString(), "rejected")}
+                                disabled={isProcessing === submission.id.toString()}
                               >
-                                {isProcessing === submission.id ? "Processing..." : "Reject"}
+{isProcessing === submission.id.toString() ? "Processing..." : "Reject"}
                               </Button>
                             </>
                           )}
@@ -353,8 +353,8 @@ export default function AdminPage() {
                                 </TabsContent>
                               </Tabs>
                               <DialogFooter>
-                                <Button onClick={handleSaveEdit} disabled={isProcessing === editingMosque?.id}>
-                                  {isProcessing === editingMosque?.id ? "Saving..." : "Save Changes"}
+                                <Button onClick={handleSaveEdit} disabled={isProcessing === editingMosque?.id.toString()}>
+                                  {isProcessing === editingMosque?.id.toString() ? "Saving..." : "Save Changes"}
                                 </Button>
                               </DialogFooter>
                             </DialogContent>
@@ -432,8 +432,8 @@ export default function AdminPage() {
                               </TabsContent>
                             </Tabs>
                             <DialogFooter>
-                              <Button onClick={handleSaveEdit} disabled={isProcessing === editingMosque?.id}>
-                                {isProcessing === editingMosque?.id ? "Saving..." : "Save Changes"}
+                              <Button onClick={handleSaveEdit} disabled={isProcessing === editingMosque?.id.toString()}>
+                                {isProcessing === editingMosque?.id.toString() ? "Saving..." : "Save Changes"}
                                 </Button>
                             </DialogFooter>
                           </DialogContent>
