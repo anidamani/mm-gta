@@ -98,7 +98,7 @@ export const mosques: Mosque[] =
     "address": "9149 Derry Rd Basement",
     "city": "Milton",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -207,7 +207,7 @@ export const mosques: Mosque[] =
     "address": "1450 Litchfield Rd",
     "city": "Oakville",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -590,7 +590,7 @@ export const mosques: Mosque[] =
     "address": "4081 Dufferin St",
     "city": "North York",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -653,7 +653,7 @@ export const mosques: Mosque[] =
     "address": "2200 South Sheridan Way",
     "city": "Mississauga",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -1836,7 +1836,7 @@ export const mosques: Mosque[] =
     "address": "4265 Thomas Alton Blvd #203",
     "city": "Burlington",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2414,7 +2414,7 @@ export const mosques: Mosque[] =
   {
     "id": 113,
     "mosque_name": "Al-Eman Islamic Center",
-    "address": null,
+    "address": "",
     "city": "Mississauga",
     "additional_notes": "",
     "website": "https://www.al-eman.ca/",
@@ -2435,7 +2435,7 @@ export const mosques: Mosque[] =
   {
     "id": 114,
     "mosque_name": "Dar AL- Tawheed",
-    "address": null,
+    "address": "",
     "city": "Mississauga",
     "additional_notes": "",
     "website": "https://daraltawheed.ca",
@@ -2550,7 +2550,7 @@ export const mosques: Mosque[] =
     "address": "1527 Bayly St",
     "city": "Pickering",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2571,7 +2571,7 @@ export const mosques: Mosque[] =
     "address": "940 Dillingham Rd",
     "city": "Pickering",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2679,7 +2679,7 @@ export const mosques: Mosque[] =
     "address": "1626 Simcoe St N",
     "city": "Oshawa",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2700,7 +2700,7 @@ export const mosques: Mosque[] =
     "address": "1626 Durham Regional Rd 2",
     "city": "Oshawa",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2721,7 +2721,7 @@ export const mosques: Mosque[] =
     "address": "51 Townline",
     "city": "Orangeville",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2763,7 +2763,7 @@ export const mosques: Mosque[] =
     "address": "1625 Scugog St",
     "city": "Port Perry",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2852,7 +2852,7 @@ export const mosques: Mosque[] =
     "address": "9853 Leslie St",
     "city": "Richmond Hill",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2894,7 +2894,7 @@ export const mosques: Mosque[] =
     "address": "45 Red Maple Rd",
     "city": "Richmond Hill",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -2912,7 +2912,7 @@ export const mosques: Mosque[] =
   {
     "id": 136,
     "mosque_name": "Islamic Society of York Region",
-    "address": null,
+    "address": "",
     "city": "Richmond Hill",
     "additional_notes": "",
     "website": "https://isyr.org",
@@ -2937,7 +2937,7 @@ export const mosques: Mosque[] =
     "address": "150 Sandiford Dr",
     "city": "Whitchurch-Stouffville",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -3063,7 +3063,7 @@ export const mosques: Mosque[] =
   {
     "id": 143,
     "mosque_name": "Vaughan Islamic Community Centre",
-    "address": null,
+    "address": "",
     "city": "Vaughan",
     "additional_notes": "",
     "website": "www.vaughanislamiccentre.com",
@@ -3155,7 +3155,7 @@ export const mosques: Mosque[] =
     "address": "100 White Oaks Ct",
     "city": "Whitby",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -3261,7 +3261,7 @@ export const mosques: Mosque[] =
   {
     "id": 152,
     "mosque_name": "Al Rayan Islamic Centre",
-    "address": null,
+    "address": "",
     "city": "Ajax",
     "additional_notes": "",
     "website": "http://www.alrayanislamiccentre.org",
@@ -3283,7 +3283,7 @@ export const mosques: Mosque[] =
   {
     "id": 153,
     "mosque_name": "Islamic Centre of Markham / Masjid Darul Iman",
-    "address": null,
+    "address": "",
     "city": "Markham",
     "additional_notes": "",
     "website": "http://www.daruliman.org",
@@ -3308,7 +3308,7 @@ export const mosques: Mosque[] =
   {
     "id": 154,
     "mosque_name": "Islamic Society of Markham",
-    "address": null,
+    "address": "",
     "city": "Markham",
     "additional_notes": "",
     "website": "http://www.markhammasjid.ca",
@@ -3331,7 +3331,7 @@ export const mosques: Mosque[] =
   {
     "id": 155,
     "mosque_name": "Ar-Rehman Islamic Center",
-    "address": null,
+    "address": "",
     "city": "Mississauga",
     "additional_notes": "",
     "website": "https://aric-icna.ca/",
@@ -3355,7 +3355,7 @@ export const mosques: Mosque[] =
   {
     "id": 156,
     "mosque_name": "Erin Islamic Center",
-    "address": null,
+    "address": "",
     "city": "Erin",
     "additional_notes": "",
     "website": "http://erinislamiccenter.ca",
@@ -3508,7 +3508,7 @@ export const mosques: Mosque[] =
     "address": "225 King Ave E",
     "city": "Newcastle",
     "additional_notes": "",
-    "website": null,
+    "website": "",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -3613,7 +3613,7 @@ export const mosques: Mosque[] =
   {
     "id": 168,
     "mosque_name": "Islamic Society of York Region",
-    "address": null,
+    "address": "",
     "city": "York",
     "additional_notes": "",
     "website": "https://isyr.org",

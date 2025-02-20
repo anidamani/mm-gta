@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import type { PrayerType } from "@/types/mosque"
 
@@ -22,8 +21,26 @@ export default function HomePage() {
   const [selectedCity, setSelectedCity] = React.useState<string>("all")
   const [searchQuery, setSearchQuery] = React.useState("")
   const [prayerType, setPrayerType] = React.useState<PrayerType>("taraweeh")
+  const [isHeaderVisible, setIsHeaderVisible] = React.useState(true)
+  const lastScrollY = React.useRef(0)
 
   const cities = Array.from(new Set(mosques.map((mosque) => mosque.city))).sort()
+
+  // Add this state with other state declarations
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
+  // Modify the existing scroll effect
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      setIsHeaderVisible(currentScrollY < lastScrollY.current || currentScrollY < 10)
+      setIsScrolled(currentScrollY > 100)
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const filteredMosques = mosques.filter((mosque) => {
     const matchesCity = selectedCity === "all" || mosque.city === selectedCity
@@ -42,7 +59,7 @@ export default function HomePage() {
   }
 
   const getGoogleMapsUrl = (mosque_name: string, address: string, city: string) => {
-    if (!address) return null;
+    if (!address) return undefined;
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${mosque_name}, ${address}, ${city}, ON, Canada`)}`
   }
 
@@ -57,16 +74,32 @@ export default function HomePage() {
     times: { start_date: string; end_date: string; prayer_time: string }[]
   ) => {
     const now = new Date()
-    for (let i = 0; i < times.length; i++) {
-      const threshold = new Date(`${times[i].end_date} ${times[i].prayer_time}`)
-      if (now < threshold) return i
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+
+    // If we're before the first period, return 0
+    if (today < new Date(times[0].start_date)) {
+      return 0
     }
+
+    // Find the current period based on date range
+    for (let i = 0; i < times.length; i++) {
+      const startDate = new Date(times[i].start_date)
+      const endDate = new Date(times[i].end_date)
+      if (today >= startDate && today <= endDate) {
+        return i
+      }
+    }
+
+    // If we're after all periods, return the last index
     return times.length - 1
   }
 
   return (
-    <div className={`min-h-screen bg-gradient-to-b from-background to-accent ${isDarkMode ? 'dark' : ''}`}>
-      <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="min-h-screen bg-gradient-to-b from-background to-accent">
+      <header className={cn(
+        "fixed w-full top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-transform duration-300",
+        !isHeaderVisible && "-translate-y-full"
+      )}>
         <div className="container flex h-16 max-w-screen-md items-center">
           <div className="mr-4 hidden md:flex">
             <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center">
@@ -88,73 +121,147 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main className="container max-w-screen-md py-6">
+      <div className={cn(
+        "fixed w-full top-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b transition-transform duration-300",
+        !isScrolled && "translate-y-[-100%]"
+      )}>
+        <div className="container max-w-screen-md py-2">
+          <div className="flex gap-2">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Search mosques..."
+                className="pl-9"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            <Select value={selectedCity} onValueChange={setSelectedCity}>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Select city" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Cities</SelectItem>
+                {cities.map((city) => (
+                  <SelectItem key={city} value={city}>
+                    {city}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </div>
+      
+      <main className="container max-w-screen-md pt-20 pb-6">
         <Tabs 
           defaultValue="taraweeh" 
           value={prayerType} 
           onValueChange={(value) => setPrayerType(value as PrayerType)}
-          className="flex flex-col h-[calc(100vh-4rem)]" // Add this line
+          className="flex flex-col"
         >
-          <TabsList className="grid w-full grid-cols-3 mb-6 sticky top-0 z-10 bg-background/95 backdrop-blur">
-            <TabsTrigger value="taraweeh">
-              <span className="md:inline hidden">Taraweeh Prayer</span>
-              <span className="md:hidden">Taraweeh</span>
-            </TabsTrigger>
-            <TabsTrigger value="jumuah">
-              <span className="md:inline hidden">Jumuah Prayer</span>
-              <span className="md:hidden">Jumuah</span>
-            </TabsTrigger>
-            <TabsTrigger value="eid" disabled className="relative">
-              <span className="md:inline hidden">Eid Prayer</span>
-              <span className="md:hidden">Eid</span>
-              <Badge
-                variant="secondary"
-                className="absolute -top-1 -right-1 text-xs px-1.5 py-0.5 bg-muted-foreground/10"
-              >
-                Soon
-              </Badge>
-            </TabsTrigger>
-          </TabsList>
+                <div className={cn(
+                  "sticky top-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300",
+                  isScrolled && "border-b"
+                )}>
+                  <TabsList className="grid w-full grid-cols-3 mb-0">
+                    <TabsTrigger value="taraweeh">
+                      <span className="md:inline hidden">Taraweeh Prayer</span>
+                      <span className="md:hidden">Taraweeh</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="jumuah">
+                      <span className="md:inline hidden">Jumuah Prayer</span>
+                      <span className="md:hidden">Jumuah</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="eid" disabled className="relative">
+                      <span className="md:inline hidden">Eid Prayer</span>
+                      <span className="md:hidden">Eid</span>
+                      <Badge
+                        variant="secondary"
+                        className="absolute -top-1 -right-1 text-xs px-1.5 py-0.5 bg-muted-foreground/10"
+                      >
+                        Soon
+                      </Badge>
+                    </TabsTrigger>
+                  </TabsList>
 
-          <Card className="bg-card sticky top-[4.5rem] z-10">
-            <CardHeader>
-              <CardTitle>{prayerType === "taraweeh" ? "Find Taraweeh" : "Find Jumuah"}</CardTitle>
-              <CardDescription>
-                {prayerType === "taraweeh"
-                  ? "Search for Taraweeh prayer locations during Ramadan"
-                  : "Search for Friday prayer locations and times"}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex gap-2">
-                <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                  <Input
-                    type="search"
-                    placeholder="Search mosques..."
-                    className="pl-9"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                </div>
-                <Select value={selectedCity} onValueChange={setSelectedCity}>
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Select city" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Cities</SelectItem>
-                    {cities.map((city) => (
-                      <SelectItem key={city} value={city}>
-                        {city}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                  <div className={cn(
+                    "max-h-0 overflow-hidden transition-all duration-300",
+                    isScrolled && "max-h-[60px] py-2"
+                  )}>
+                    <div className="container max-w-screen-md">
+                      <div className="flex gap-2">
+                        <div className="relative flex-1">
+                          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                          <Input
+                            type="search"
+                            placeholder="Search mosques..."
+                            className="pl-9"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                          />
+                        </div>
+                        <Select value={selectedCity} onValueChange={setSelectedCity}>
+                          <SelectTrigger className="w-[180px]">
+                            <SelectValue placeholder="Select city" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="all">All Cities</SelectItem>
+                            {cities.map((city) => (
+                              <SelectItem key={city} value={city}>
+                                {city}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+                  </div>
               </div>
-            </CardContent>
-          </Card>
+      
+                <Card className={cn(
+                  "bg-card transition-opacity duration-300",
+                  isScrolled && "opacity-0 pointer-events-none h-0 overflow-hidden"
+                )}>
+                  <CardHeader>
+                    <CardTitle>{prayerType === "taraweeh" ? "Find Taraweeh" : "Find Jumuah"}</CardTitle>
+                    <CardDescription>
+                      {prayerType === "taraweeh"
+                        ? "Search for Taraweeh prayer locations during Ramadan"
+                        : "Search for Friday prayer locations and times"}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex gap-2">
+                      <div className="relative flex-1">
+                        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                        <Input
+                          type="search"
+                          placeholder="Search mosques..."
+                          className="pl-9"
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                      </div>
+                      <Select value={selectedCity} onValueChange={setSelectedCity}>
+                        <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Select city" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="all">All Cities</SelectItem>
+                          {cities.map((city) => (
+                            <SelectItem key={city} value={city}>
+                              {city}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </CardContent>
+                </Card>
 
-          <div className="mt-6 flex-1 overflow-auto">
+          <div className="mt-6">
             <div className="space-y-4">
               <div className="flex items-center justify-between">  {/* Removed 'sticky top-0' class */}
                 <h2 className="text-lg font-semibold">
@@ -203,7 +310,7 @@ export default function HomePage() {
                           </div>
                           {mosque.address && (
                             <a
-                              href={getGoogleMapsUrl(mosque.mosque_name, mosque.address, mosque.city)}
+                              href={getGoogleMapsUrl(mosque.mosque_name, mosque.address, mosque.city) || '#'}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center gap-1 hover:text-primary transition-colors"
@@ -217,9 +324,7 @@ export default function HomePage() {
 
                         {prayerType === "taraweeh" && mosque.taraweeh?.times && (
                           <div className="grid gap-2">
-                            <h4 className="font-medium text-sm">
-                              Prayer Schedule
-                            </h4>
+                            <h4 className="font-medium text-sm">Prayer Schedule</h4>
                             <div className="grid gap-2">
                               {mosque.taraweeh.times.map((time, index) => {
                                 const activePeriodIndex = getActivePeriodIndex(mosque.taraweeh!.times);
@@ -227,7 +332,7 @@ export default function HomePage() {
                                   <div
                                     key={index}
                                     className={cn(
-                                      "flex items-center gap-2 rounded-md p-2 transition-colors",
+                                      "flex items-center gap-3",
                                       activePeriodIndex === index && "bg-accent"
                                     )}
                                   >
