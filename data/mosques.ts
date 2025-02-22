@@ -912,38 +912,13 @@ export const mosques: Mosque[] =
     "city": "Mississauga",
     "additional_notes": "",
     "website": "https://qasimululoomcanada.com/",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 42,
-    "mosque_name": "Iqbal Musallah",
-    "address": "4099 Erin Mills Pkwy unit 19",
-    "city": "Mississauga",
-    "additional_notes": "",
-    "website": "https://iqbalfoods.ca/",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:00 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "01:30 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:00 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:30 PM", "notes": "" }
       ]
     }
   },
@@ -964,7 +939,23 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:15 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:15 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:00 PM", "notes": "" }
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "mosque_name": "Churchill Meadows Community Centre (MNN)",
+    "address": "5320 Ninth Line",
+    "city": "Mississauga",
+    "additional_notes": "",
+    "website": "http://mnnexus.ca/",
+    "jumuah": {
+      "times": [
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:15 PM", "notes": "" }
       ]
     }
   },
