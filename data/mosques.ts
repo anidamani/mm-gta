@@ -27,111 +27,78 @@ export const mosques: Mosque[] =
   },
   {
     "id": 2,
-    "mosque_name": "Masjid Khadijah (mosque)",
+    "mosque_name": "Masjid Khadijah",
     "address": "100 Nipissing Rd #7",
     "city": "Milton",
-    "additional_notes": "",
+    "additional_notes": "Arrangement for sisters",
     "website": "http://masjidkhadijah.ca",
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "12:40 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:00 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:30 PM", "notes": "" }
+      ]
+    }
+  },
+  {
+    "id": 175,
+    "mosque_name": "Suffah Academy",
+    "address": "8611 Escarpment Way, Unit #1",
+    "city": "Milton",
+    "additional_notes": "No Arrangement for sisters",
+    "website": "http://masjidkhadijah.ca",
+    "taraweeh": {
+      "rakaat": 20,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     }
   },
   {
     "id": 3,
     "mosque_name": "Sayyidah Fatemah Islamic Centre",
-    "address": "4512 Tremaine Rd",
+    "address": "136 Robert St ",
     "city": "Milton",
-    "additional_notes": "",
+    "additional_notes": "Milton Fair Grounds (Hall #1)",
     "website": "http://miltonmosque.com",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
     "jumuah": {
       "times": [
         { "prayer_number": 1, "prayer_time": "12:40 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" }
+        { "prayer_number": 2, "prayer_time": "01:40 PM", "notes": "" }
       ]
     }
   },
   {
     "id": 4,
-    "mosque_name": "Milton Muslim Community Center - MMCC",
-    "address": "50 Steeles Ave E #212-213",
+    "mosque_name": "Sherwood Community Center (MMCC)",
+    "address": "6355 Main St W",
     "city": "Milton",
     "additional_notes": "",
     "website": "http://www.mmccmilton.ca/",
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-10", "prayer_time": "08:45 PM" },
+        { "start_date": "2025-03-11", "end_date": "2025-03-20", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
         { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" },
-        { "prayer_number": 3, "prayer_time": "02:30 PM", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 5,
-    "mosque_name": "Thompson Musalla",
-    "address": "9149 Derry Rd Basement",
-    "city": "Milton",
-    "additional_notes": "",
-    "website": "",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 6,
-    "mosque_name": "Muslim Association Of Milton (MAM)",
-    "address": "Derry Rd W",
-    "city": "Milton",
-    "additional_notes": "",
-    "website": "https://miltonmasjid.com/",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "12:40 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" }
+        { "prayer_number": 2, "prayer_time": "01:15 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "01:45 PM", "notes": "" }
       ]
     }
   },
@@ -145,9 +112,9 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:15 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
@@ -158,23 +125,72 @@ export const mosques: Mosque[] =
     }
   },
   {
-    "id": 8,
-    "mosque_name": "Jame Masjid Oakville : Noor-UL- Haram",
-    "address": "2478 Ninth Line",
-    "city": "Oakville",
+    "id": 6,
+    "mosque_name": "Milton Sports Center (MAM)",
+    "address": "605 Santa Maria Blvd",
+    "city": "Milton",
     "additional_notes": "",
-    "website": "https://wimcanada.com/",
+    "website": "http://miltonmasjid.com/",
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:40 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:15 PM", "notes": "" },
+        { "prayer_number": 4, "prayer_time": "02:40 PM", "notes": "No English Speech" }
+      ]
+    }
+  },
+  {
+    "id": 173,
+    "mosque_name": "Halton Learning Centre (MAM)",
+    "address": "550 Ontario St",
+    "city": "Milton",
+    "additional_notes": "",
+    "website": "http://miltonmasjid.com/",
+    "taraweeh": {
+      "rakaat": 20,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:15 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
+      ]
+    }
+  },
+  {
+    "id": 174,
+    "mosque_name": "Milton Seniors Activity Centre (MAM)",
+    "address": "5500 Childs Dr.",
+    "city": "Milton",
+    "additional_notes": "",
+    "website": "http://miltonmasjid.com/",
+    "taraweeh": {
+      "rakaat": 20,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:15 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "mosque_name": "Masjid Noor-ul-Haram (WIM Canada)",
+    "address": "2478 Ninth Line",
+    "city": "Oakville",
+    "additional_notes": "",
+    "website": "https://wimcanada.com/",
+    "jumuah": {
+      "times": [
+        { "prayer_number": 1, "prayer_time": "01:15 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:15 PM", "notes": "" }
       ]
     }
   },
@@ -203,28 +219,42 @@ export const mosques: Mosque[] =
   },
   {
     "id": 10,
-    "mosque_name": "Jummah Prayer Hall Oakville",
-    "address": "1450 Litchfield Rd",
+    "mosque_name": "Glen Abbey United Church (ICO)",
+    "address": "1469 Nottinghill Gate",
     "city": "Oakville",
-    "additional_notes": "",
-    "website": "",
+    "additional_notes": "On Saturdays, Taraweeh at 9:40 PM",
+    "website": "https://www.instagram.com/islamic_oakville/?hl=en",
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "09:15 PM" },
         { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "mosque_name": "QEP Community Centre (ICO)",
+    "address": "2302 Bridge Road",
+    "city": "Oakville",
+    "additional_notes": "",
+    "website": "https://www.instagram.com/islamic_oakville/?hl=en",
+    "jumuah": {
+      "times": [
+        { "prayer_number": 1, "prayer_time": "1:35 PM", "notes": "" }
       ]
     }
   },
   {
     "id": 11,
-    "mosque_name": "Madina Institute - Canada",
+    "mosque_name": "Madina Institute Masjid",
     "address": "520 Speers Rd",
     "city": "Oakville",
     "additional_notes": "",
@@ -232,14 +262,16 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
         { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
         { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:15 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:15 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "03:15 PM", "notes": "" }
       ]
     }
   },
@@ -260,7 +292,10 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "11:00 AM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "12:15 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "01:30 PM", "notes": "" },
+        { "prayer_number": 4, "prayer_time": "03:00 PM", "notes": "" },
       ]
     }
   },
@@ -281,7 +316,7 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" }
       ]
     }
   },
@@ -648,29 +683,8 @@ export const mosques: Mosque[] =
     }
   },
   {
-    "id": 31,
-    "mosque_name": "Jami Masjid",
-    "address": "2200 South Sheridan Way",
-    "city": "Mississauga",
-    "additional_notes": "",
-    "website": "",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
-      ]
-    }
-  },
-  {
     "id": 32,
-    "mosque_name": "ISNA Canada",
+    "mosque_name": "ISNA Canada (ICC)",
     "address": "2200 S Sheridan Way",
     "city": "Mississauga",
     "additional_notes": "",
@@ -685,13 +699,14 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:15 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:00 PM", "notes": "" }
       ]
     }
   },
   {
-    "id": 33,
-    "mosque_name": "Meadowvale Islamic Centre",
+    "id": 176,
+    "mosque_name": "Meadowvale Islamic Centre (MIC)",
     "address": "6508 Winston Churchill Blvd",
     "city": "Mississauga",
     "additional_notes": "",
@@ -699,9 +714,9 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:40 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "08:50 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:00 PM" }
       ]
     },
     "jumuah": {
@@ -712,29 +727,48 @@ export const mosques: Mosque[] =
     }
   },
   {
-    "id": 34,
-    "mosque_name": "Rowdah Centre (Meadowvale Musalla)",
-    "address": "6900 Millcreek Dr #4",
+    "id": 33,
+    "mosque_name": "Meadowvale West Church (MIC)",
+    "address": "6945 Meadowvale Town Circle Circle",
     "city": "Mississauga",
     "additional_notes": "",
+    "website": "https://mici.org/",
+    "taraweeh": {
+      "rakaat": 20,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:55 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:05 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "mosque_name": "Rowdah Centre",
+    "address": "6900 Millcreek Dr #4",
+    "city": "Mississauga",
+    "additional_notes": "No Arrangements for Sisters",
     "website": "http://www.rowdahcentre.ca/",
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:15 PM", "notes": "" },
+        { "prayer_number": 1, "prayer_time": "01:45 PM", "notes": "" },
+        { "prayer_number": 1, "prayer_time": "02:15 PM", "notes": "" }
       ]
     }
   },
   {
     "id": 35,
-    "mosque_name": "ICNA Ar-Rehman Islamic Center",
+    "mosque_name": "Ar-Rehman Islamic Center (ARIC)",
     "address": "6120 Montevideo Rd",
     "city": "Mississauga",
     "additional_notes": "",
@@ -766,9 +800,10 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:50 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-16", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-17", "end_date": "2025-03-23", "prayer_time": "09:10 PM" },
+        { "start_date": "2025-03-24", "end_date": "2025-03-30", "prayer_time": "09:20 PM" },
       ]
     },
     "jumuah": {
@@ -790,8 +825,8 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-19", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-20", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {
@@ -812,9 +847,9 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-19", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-20", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
@@ -835,13 +870,15 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-19", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-20", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:30 PM", "notes": "" }
       ]
     }
   },
@@ -862,7 +899,9 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:20 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:00 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "01:40 PM", "notes": "" }
       ]
     }
   },
@@ -2262,28 +2301,6 @@ export const mosques: Mosque[] =
     }
   },
   {
-    "id": 106,
-    "mosque_name": "Sayyidah Fatemah (SA) Islamic Centre",
-    "address": "136 Robert Street",
-    "city": "Milton",
-    "additional_notes": "",
-    "website": "http://miltonmosque.com",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "12:40 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" }
-      ]
-    }
-  },
-  {
     "id": 107,
     "mosque_name": "Imam Bukhari Centre (Ahle-Hadith Society of Canada)",
     "address": "50 Steeles Ave E Unit-8",
@@ -2293,14 +2310,13 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:30 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "1:00 PM", "notes": "" }
       ]
     }
   },
@@ -3393,27 +3409,6 @@ export const mosques: Mosque[] =
         { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
         { "prayer_number": 2, "prayer_time": "01:25 PM", "notes": "" },
         { "prayer_number": 3, "prayer_time": "02:10 PM", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 158,
-    "mosque_name": "Islamic Centre of Canada",
-    "address": "2200 South Sheridan Way",
-    "city": "Mississauga",
-    "additional_notes": "",
-    "website": "http://www.isnacanada.com",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
       ]
     }
   },

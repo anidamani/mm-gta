@@ -263,16 +263,14 @@ export default function HomePage() {
 
           <div className="mt-6">
             <div className="space-y-4">
-              <div className="flex items-center justify-between">  {/* Removed 'sticky top-0' class */}
+              <div className="flex items-center justify-between">
                 <h2 className="text-lg font-semibold">
                   {selectedCity === "all" ? "All Locations" : `Mosques in ${selectedCity}`}
                   <Badge variant="secondary" className="ml-2">
                     {filteredMosques.length}
                   </Badge>
                 </h2>
-                <Link href="/submit" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Add New Location
-                </Link>
+                {/* Removed Add New Location link */}
               </div>
 
               <div className="space-y-4">
