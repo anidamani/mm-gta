@@ -44,8 +44,8 @@ export const mosques: Mosque[] =
       "times": [
         { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
         { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "02:00 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "02:30 PM", "notes": "" }
+        { "prayer_number": 3, "prayer_time": "02:00 PM", "notes": "" },
+        { "prayer_number": 4, "prayer_time": "02:30 PM", "notes": "" }
       ]
     }
   },
@@ -295,7 +295,7 @@ export const mosques: Mosque[] =
         { "prayer_number": 1, "prayer_time": "11:00 AM", "notes": "" },
         { "prayer_number": 2, "prayer_time": "12:15 PM", "notes": "" },
         { "prayer_number": 3, "prayer_time": "01:30 PM", "notes": "" },
-        { "prayer_number": 4, "prayer_time": "03:00 PM", "notes": "" },
+        { "prayer_number": 4, "prayer_time": "03:00 PM", "notes": "" }
       ]
     }
   },
@@ -961,7 +961,7 @@ export const mosques: Mosque[] =
   },
   {
     "id": 44,
-    "mosque_name": "Jame Masjid",
+    "mosque_name": "Cooper Masjid (IPC)",
     "address": "5761 Coopers Ave",
     "city": "Mississauga",
     "additional_notes": "",
@@ -970,13 +970,14 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-16", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-17", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:05 PM", "notes": "" },
+        { "prayer_number": 1, "prayer_time": "02:05 PM", "notes": "" }
       ]
     }
   },
@@ -990,9 +991,10 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-03", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-04", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
@@ -1035,20 +1037,23 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:05 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:10 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:00 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "01:50 PM", "notes": "" },
+        { "prayer_number": 4, "prayer_time": "02:40 PM", "notes": "" },
       ]
     }
   },
   {
     "id": 48,
-    "mosque_name": "Al-Eman Islamic Centre of Canada INC.",
+    "mosque_name": "Al-Eman Islamic Centre of Canada",
     "address": "265 Enfield Pl #100d",
     "city": "Mississauga",
     "additional_notes": "",
@@ -1063,7 +1068,8 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:00 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:00 PM", "notes": "" }
       ]
     }
   },
@@ -1084,7 +1090,8 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:00 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:15 PM", "notes": "" }
       ]
     }
   },
@@ -1093,7 +1100,7 @@ export const mosques: Mosque[] =
     "mosque_name": "Dar Al-Tawheed Islamic Centre",
     "address": "5550 McAdam Rd",
     "city": "Mississauga",
-    "additional_notes": "",
+    "additional_notes": "West Entrance",
     "website": "https://daraltawheed.ca/",
     "taraweeh": {
       "rakaat": 20,
@@ -1105,8 +1112,30 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "English" },
+        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "Arabic" }
+      ]
+    }
+  },
+  {
+    "id": 178,
+    "mosque_name": "Tawheed Community Centre",
+    "address": "5585 McAdam Rd",
+    "city": "Mississauga",
+    "additional_notes": "South Entrance",
+    "website": "https://daraltawheed.ca/",
+    "taraweeh": {
+      "rakaat": 20,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+      ]
+    },
+    "jumuah": {
+      "times": [
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "English" },
+        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "Arabic" }
       ]
     }
   },
@@ -1120,14 +1149,16 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-27", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-28", "end_date": "2025-03-30", "prayer_time": "09:30 PM" },
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:00 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:00 PM", "notes": "" },
       ]
     }
   },
@@ -1148,49 +1179,10 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 53,
-    "mosque_name": "Salaheddin Islamic Centre",
-    "address": "741 Kennedy Rd, Scarborough, ON M1K 2C6, Canada",
-    "city": "Scarborough",
-    "additional_notes": "",
-    "website": "http://www.salaheddinschool.org/",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 54,
-    "mosque_name": "Salaheddin School",
-    "address": "741 Kennedy Rd.",
-    "city": "Scarborough",
-    "additional_notes": "",
-    "website": "http://www.salaheddinschool.org",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:30 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:25 PM", "notes": "" },
+        { "prayer_number": 4, "prayer_time": "03:15 PM", "notes": "" }
       ]
     }
   },
@@ -1211,7 +1203,8 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 1, "prayer_time": "01:45 PM", "notes": "" }
       ]
     }
   },
@@ -1259,7 +1252,7 @@ export const mosques: Mosque[] =
   },
   {
     "id": 58,
-    "mosque_name": "Islamic Foundation of Toronto",
+    "mosque_name": "Islamic Foundation of Toronto (IFT)",
     "address": "441 Nugget Ave",
     "city": "Scarborough",
     "additional_notes": "",
@@ -1268,18 +1261,14 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "12:31 PM", "notes": "" },
-        { "prayer_number": 2, "prayer_time": "12:50 PM", "notes": "" },
-        { "prayer_number": 3, "prayer_time": "01:30 PM", "notes": "" },
-        { "prayer_number": 4, "prayer_time": "12:31 PM", "notes": "" },
-        { "prayer_number": 5, "prayer_time": "02:20 PM", "notes": "" },
-        { "prayer_number": 6, "prayer_time": "02:30 PM", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:50 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "02:20 PM", "notes": "" }
       ]
     }
   },
@@ -1300,7 +1289,8 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:30 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:55 PM", "notes": "" }
       ]
     }
   },
@@ -1338,13 +1328,15 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:10 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:20 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:30 PM", "notes": "" }
       ]
     }
   },
@@ -1359,13 +1351,15 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-21", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-22", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:00 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" },
+        { "prayer_number": 3, "prayer_time": "02:30 PM", "notes": "" }
       ]
     }
   },
@@ -1386,17 +1380,18 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:35 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:35 PM", "notes": "" }
       ]
     }
   },
   {
     "id": 64,
-    "mosque_name": "Durham United Ahlul Bayt Centre",
-    "address": "487 Westney Rd S #19, Ajax, ON L1S 6W7, Canada",
-    "city": "Ajax",
+    "mosque_name": "Masjid Subhan Scarborough",
+    "address": "42956 Eglinton Ave. E",
+    "city": "Scarborough",
     "additional_notes": "",
-    "website": "https://www.duacentre.ca/",
+    "website": "https://www.subhanislamicassociation.org/",
     "taraweeh": {
       "rakaat": 20,
       "times": [
@@ -1407,25 +1402,18 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:45 PM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:45 PM", "notes": "" }
       ]
     }
   },
   {
     "id": 65,
-    "mosque_name": "Bradford Islamic Community Centre",
-    "address": "136 Holland St E Unit # 07",
+    "mosque_name": "Bradford Community Centre (Curling Centre) ",
+    "address": "125 Simcoe Road",
     "city": "Bradford",
-    "additional_notes": "",
+    "additional_notes": "2nd Floor",
     "website": "http://www.bradfordmosque.com/",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
     "jumuah": {
       "times": [
         { "prayer_number": 1, "prayer_time": "01:30 PM", "notes": "" }
@@ -1443,13 +1431,14 @@ export const mosques: Mosque[] =
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:15 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" },
+        { "prayer_number": 1, "prayer_time": "01:30 PM", "notes": "" }
       ]
     }
   },
@@ -1470,28 +1459,7 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
-      ]
-    }
-  },
-  {
-    "id": 68,
-    "mosque_name": "Islamic Society of Bolton and Caledon (Bolton Masjid)",
-    "address": "8 Nancy St, Bolton, ON L7E 1C7, Canada",
-    "city": "Bolton",
-    "additional_notes": "",
-    "website": "https://boltonmasjid.ca/",
-    "taraweeh": {
-      "rakaat": 20,
-      "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
-      ]
-    },
-    "jumuah": {
-      "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "12:30 PM", "notes": "" }
       ]
     }
   },
@@ -1505,14 +1473,16 @@ export const mosques: Mosque[] =
     "taraweeh": {
       "rakaat": 20,
       "times": [
-        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "07:45 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-14", "prayer_time": "08:50 PM" },
+        { "start_date": "2025-03-15", "end_date": "2025-03-19", "prayer_time": "08:55 PM" },
+        { "start_date": "2025-03-20", "end_date": "2025-03-24", "prayer_time": "09:00 PM" },
+        { "start_date": "2025-03-25", "end_date": "2025-03-30", "prayer_time": "09:10 PM" }
       ]
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:30 PM", "notes": "" }
       ]
     }
   },
@@ -1533,7 +1503,7 @@ export const mosques: Mosque[] =
     },
     "jumuah": {
       "times": [
-        { "prayer_number": 1, "prayer_time": "N/A", "notes": "" }
+        { "prayer_number": 1, "prayer_time": "01:00 PM", "notes": "" }
       ]
     }
   },
