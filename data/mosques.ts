@@ -181,6 +181,42 @@ export const mosques: Mosque[] =
     }
   },
   {
+    "id": 53,
+    "mosque_name": " Lions Club Hall",
+    "address": "77 Thompson Rd S, Milton",
+    "city": "Milton",
+    "additional_notes": "",
+    "website": "https://www.syyidahayshacentre.com",
+    "taraweeh": {
+      "rakaat": 8,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-30", "prayer_time": "09:00 PM" },
+      ]
+    },
+    "jumuah": {
+      "times": [
+        { "prayer_number": 1, "prayer_time": "12:35 AM", "notes": "" },
+        { "prayer_number": 2, "prayer_time": "01:20 PM", "notes": "" }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "mosque_name": "Munn's United Church (Al Falah)",
+    "address": "5 Dundas Street East",
+    "city": "Oakville",
+    "additional_notes": "",
+    "website": "https://alfalahcentre.ca/",
+    "taraweeh": {
+      "rakaat": 20,
+      "times": [
+        { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
+        { "start_date": "2025-03-09", "end_date": "2025-03-30", "prayer_time": "09:00 PM" },
+      ]
+    }
+  },
+  {
     "id": 8,
     "mosque_name": "Masjid Noor-ul-Haram (WIM Canada)",
     "address": "2478 Ninth Line",
@@ -822,7 +858,7 @@ export const mosques: Mosque[] =
     "additional_notes": "",
     "website": "http://icco.ca/",
     "taraweeh": {
-      "rakaat": 20,
+      "rakaat": 8,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
         { "start_date": "2025-03-09", "end_date": "2025-03-19", "prayer_time": "09:15 PM" },
@@ -1275,16 +1311,16 @@ export const mosques: Mosque[] =
   {
     "id": 59,
     "mosque_name": "Al-Abrar Centre",
-    "address": "155 Edward St",
+    "address": "33 Wellington St E",
     "city": "Aurora",
-    "additional_notes": "",
+    "additional_notes": "New location",
     "website": "http://www.alabrar.ca/",
     "taraweeh": {
       "rakaat": 20,
       "times": [
         { "start_date": "2025-02-28", "end_date": "2025-03-08", "prayer_time": "08:00 PM" },
-        { "start_date": "2025-03-09", "end_date": "2025-03-18", "prayer_time": "09:15 PM" },
-        { "start_date": "2025-03-19", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
+        { "start_date": "2025-03-09", "end_date": "2025-03-20", "prayer_time": "09:15 PM" },
+        { "start_date": "2025-03-21", "end_date": "2025-03-30", "prayer_time": "09:30 PM" }
       ]
     },
     "jumuah": {

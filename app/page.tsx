@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Moon, MapPin, Clock, Building2, Search, ExternalLink, ChurchIcon as MosqueIcon } from "lucide-react"
+import { Moon, MapPin, Clock, Building2, Search, ExternalLink } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { format } from "date-fns"
@@ -103,7 +103,8 @@ export default function HomePage() {
         <div className="container flex h-16 max-w-screen-md items-center">
           <div className="mr-4 hidden md:flex">
             <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center">
-              <MosqueIcon className="h-5 w-5 text-primary" />
+              {/* Adjusted rotation to 180 degrees for proper crescent orientation */}
+              <Moon className="h-5 w-5 text-primary" />
             </div>
           </div>
           <h1 className="mr-auto text-xl font-semibold text-foreground">Muslims in GTA</h1>
